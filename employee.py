@@ -1,10 +1,20 @@
 class Employee:
     raise_amt = 1.05
 
-    def __init__(self, first_name, last_name, salary):
+    def __init__(self, first_name, last_name, salary, email=None):
         self.first_name = first_name
         self.last_name = last_name
         self.salary = salary
+        self._email = email
+
+    # a 'getter' method
+    @property    
+    def email(self):
+        return self._email
+    
+    @email.setter
+    def email(self, mail):
+        self._email = mail
         
 
     def apply_raise(self):

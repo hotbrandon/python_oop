@@ -24,3 +24,9 @@ print(str(brandon))
 # print(help(Developer))
 
 print(john + jane)
+
+print(brandon.email)
+
+# set email via setter
+brandon.email = 'hotbrtandon@hotmail.com'
+print(brandon.email)
