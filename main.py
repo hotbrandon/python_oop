@@ -16,4 +16,11 @@ mgr1.add_employee(jane)
 mgr1.remove_employee(john)
 mgr1.print_employees()
 
+print(repr(brandon))
+print(str(brandon))
+# or
+# print(brandon.__repr__())
+# print(brandon.__str__())
 # print(help(Developer))
+
+print(john + jane)

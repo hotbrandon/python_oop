@@ -10,8 +10,18 @@ class Employee:
     def apply_raise(self):
         self.salary = int(self.salary * self.raise_amt)
 
+    # __repr__ is implicitly called when we call repr()
+    # calling __str__ will fallback to __repr__ if __str__ is not available
+    def __repr__(self):
+        return f"Employee('{self.first_name}', '{self.last_name}', {self.salary})"
+    
+    # __str__ is implicitly called when we call str()
     def __str__(self):
         return f"Employee: {self.first_name} {self.last_name}, Salary: ${self.salary}"
+    
+    # define what happens when we add 2 employees together
+    def __add__(self, other):
+        return self.salary + other.salary
     
 class Developer(Employee):
     raise_amt = 1.10
